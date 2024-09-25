@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agenda interactiva de eventos con búsqueda, creación y eliminación de eventos">
+    <link rel="stylesheet" href="styles.css">
+    <title>Agenda de Eventos - Interactiva</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Agenda de Eventos</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form-section" aria-label="Formulario para agregar eventos">
+            <h2>Crea un nuevo evento</h2>
+            <form id="event-form" aria-labelledby="formulario-titulo">
+                <label for="event-title">Título del evento:</label>
+                <input type="text" id="event-title" placeholder="Escribe el título" required aria-required="true">
+                
+                <label for="event-date">Fecha del evento:</label>
+                <input type="date" id="event-date" required aria-required="true">
+                
+                <button type="submit" aria-label="Agregar Evento">Agregar Evento</button>
+            </form>
+
+            <input type="text" id="search" placeholder="Buscar eventos por título o fecha" aria-label="Buscar eventos">
+            <button id="search-button" aria-label="Buscar eventos">Buscar Evento</button>
+        </section>
+
+        <section id="events-container" aria-label="Listado de eventos">
+            <h2>Lista de Eventos</h2>
+            <ul id="events-list" aria-live="polite">
+            </ul>
+        </section>
+
+        <section id="delete-section" aria-label="Eliminar todos los eventos">
+            <button id="delete-all" aria-label="Eliminar todos los eventos">Eliminar Todos los Eventos</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Agenda de Eventos. Todos los derechos reservados. Desarrollado por Juan David Perdomo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
